@@ -1,1 +1,93 @@
+# Videojuego: Guardianes del Bosque 
 
+print("========================================") 
+
+print("   ¡BIENVENIDO A GUARDIANES DEL BOSQUE!") 
+
+print("========================================") 
+
+print("Tu misión es proteger el bosque de") 
+
+print("la contaminación, los incendios y") 
+
+print("los peligros que amenazan la naturaleza.") 
+
+print("Completa misiones, supera desafíos") 
+
+print("y conviértete en un verdadero guardián.") 
+
+print("========================================") 
+
+input("\nPresiona ENTER para continuar...") 
+
+vidas = 3 
+
+nivel = 1 
+
+max_niveles = 3 
+
+while True: 
+
+    print("\nMENÚ PRINCIPAL") 
+
+    print("1. Jugar") 
+
+    print("2. Opciones") 
+
+    print("3. Créditos") 
+
+    print("4. Salir") 
+
+    opcion = input("Seleccione una opción: ") 
+
+    if opcion == "1": 
+
+        print("\nSELECCIÓN DE PERSONAJE") 
+
+        personaje = input("Ingrese el nombre de su personaje: ") 
+
+        print(f"\n¡Bienvenido, {personaje}!") 
+
+        print("Comienza tu aventura como Guardián del Bosque.") 
+
+        while nivel <= max_niveles and vidas > 0: 
+
+            print(f"\n===== NIVEL {nivel} =====") 
+
+            print("Entrada al bosque...") 
+
+            print("Explorar el bosque y cumplir misiones.") 
+
+            desafio = input( 
+
+                "¿Superó el desafío del nivel? (si/no): " 
+
+            ).lower() 
+
+            if desafio == "si": 
+
+                print("\n✅ ¡Nivel completado!") 
+
+                print("🎁 Recompensas obtenidas:") 
+
+                print("- Puntos") 
+
+                print("- Objetos") 
+
+                print("- Mejoras") 
+
+                nivel += 1 
+
+            else: 
+
+                vidas -= 1 
+
+                print("\n❌ Has perdido una vida.") 
+
+                print("Vidas restantes:", vidas) 
+
+                if vidas == 0: 
+
+                    print("\n===== GAME OVER =====") 
+
+                    break 
